@@ -1,0 +1,286 @@
+
+/* Global ---------------------------------------------------------------------------------------------------------------*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #FFF6F1;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 104px auto 52px;
+}
+
+
+.contenedor  {
+    margin: 8px;
+}
+
+header {
+    background-color: #ff8552;   
+}
+
+
+main {
+   margin: 8px;
+}
+
+
+.footer{
+    background-color: #ff8552;
+    display: flex;
+    justify-content:    center;
+    align-items: center;
+}
+/*.footerEntero{
+    display: flex;
+    align-items: flex-end;*/
+
+
+/*---------------------------------------MENU---------------------------------------------------------------------------------------*/
+nav ul  {
+    display: inline-block;
+}
+nav ul li {
+    display: inline-block;
+}
+
+.menu li {
+    margin-inline: 19px;
+    right: 5cm;
+    font-weight: bold;
+}
+
+.menu {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto; 
+}  
+
+.menu li a {
+    text-decoration:none;
+}
+
+
+/*PONER LOGO WPP*/
+.whatsappLink {
+    position: fixed;
+    top: 0cm;
+    right: 10cm;
+    left: 34cm;
+}
+
+.whatsappLink img {
+    width: 50px;
+    height: 50px;
+}
+
+/*QUIENES SOMOS*--------------------------------------------------------------------------------------------------------------------*/
+
+/*REEL------------------------------*/
+
+.reel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+media-queries .reel {
+    max-width: 600px;
+    display:flex;
+    justify-items: left; 
+    
+}
+
+.grid__h {
+    display:flex;
+    align-items: baseline;
+}
+
+/*IMAGENES DE NOSOTROS*-----------*/
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosotros img {
+    border: solid 2px #ff8552;
+}
+
+.nosotros img:hover {
+    border: solid 3px #B78571;
+}
+
+.nosotros__imagenes {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor__imagen {
+    position: relative;
+    display: inline;
+    width: 250px;
+}
+
+.imagen--texto {
+    display: none;
+    font-weight: bolder;
+    background-color: #a3a3a380;
+}
+
+.contenedor__imagen:hover .imagen--texto {
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    right: 44%;
+    color: #FFF6F1;
+}
+
+/*IMAGENES NUESTROS EQUIPOS-------------*/
+.equipos img:hover{
+    border: solid 3px #ff8552;
+}
+
+.equipos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenes__equipos{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+/*TIPO DE EVENTOS----------------------------------------------------------------------------------------------------------------------*/
+.imagen {
+    width:250px; 
+    height:180px;
+}
+
+.deportes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artistas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.marcas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* CLIENTES --------------------------------------------------------------------------------------------*/
+
+.logos{
+  border: solid 3px #B78571;
+  display: flex;
+    flex-wrap: wrap;
+}
+
+.logoLaur {
+    width: 100px;
+    margin: 11px;
+}
+
+.logoMeta{
+    width: 160px;
+    margin: 11px;
+}
+
+.logoTigre{
+    width: 220px;
+    margin: 7px;
+}
+
+.logoMM { 
+    width: 200px;
+    margin: 9px;
+}
+
+.logoUrdi{
+    width: 230px;
+    height: 154px;
+    margin: 11px;
+}
+
+/*MEDIA Y ESTILO PARA DESKTOP*/
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 52px auto 52px;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto; 
+    }  
+
+
+    .nosotros__imagenes {
+        display: flex;
+        flex-direction: row;
+    }
+
+/*TIPO DE EVENTOS DESKTOP*/
+    .imagenes__equipos{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .deportes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artistas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marcas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*CLIENTES DESKTOP*/
+    .nuestrosClientes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+ }
+
+ .nuestrosViajes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*PRESUPUESTO DESKTOP*/
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+/*CONTACTO DESKTOP*/
+.contenedor{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+ }
+
+

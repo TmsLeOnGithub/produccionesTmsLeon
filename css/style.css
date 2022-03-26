@@ -141,6 +141,7 @@ media-queries .reel {
 /*IMAGENES NUESTROS EQUIPOS-------------*/
 .equipos img:hover{
     border: solid 3px #ff8552;
+    transform: rotate(-7deg)
 }
 
 .equipos{

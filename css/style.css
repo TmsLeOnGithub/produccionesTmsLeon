@@ -12,7 +12,7 @@ body {
 }
 
 
-.contenedor  {
+.contenedor__contacto  {
     margin: 8px;
 }
 
@@ -109,10 +109,6 @@ media-queries .reel {
     border: solid 2px #ff8552;
 }
 
-.nosotros img:hover {
-    border: solid 3px #B78571;
-}
-
 .nosotros__imagenes {
     display: flex;
     flex-direction: column;
@@ -139,9 +135,7 @@ media-queries .reel {
 }
 
 /*IMAGENES NUESTROS EQUIPOS-------------*/
-.equipos img:hover{
-    border: solid 3px #ff8552;
-}
+
 
 .equipos{
     display: flex;
@@ -224,10 +218,18 @@ media-queries .reel {
         grid-template-columns: auto auto auto auto auto; 
     }  
 
-
+    
     .nosotros__imagenes {
         display: flex;
         flex-direction: row;
+    }
+    .nosotros img:hover {
+        border: solid 3px #B78571;
+    }
+   
+    .equipos img:hover{
+        border: solid 3px #ff8552;
+        transform: rotate(-7deg)
     }
 
 /*TIPO DE EVENTOS DESKTOP*/
@@ -263,10 +265,15 @@ media-queries .reel {
         align-items: center;
  }
 
+ .logos:hover{border: solid 1px #ff8552;}
+     
+    
+
+
  .nuestrosViajes{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction:column;
+    align-items:center;
 }
 
 /*PRESUPUESTO DESKTOP*/
@@ -276,11 +283,20 @@ media-queries .reel {
 }
 
 /*CONTACTO DESKTOP*/
-.contenedor{
+.contenedor__contacto{
     display: flex;
     flex-direction: column ;
     align-items: center;
 }
+.contenedor__contacto:hover{
+    transform: rotate(-7deg);
+}
  }
 
+
+
+/*.nuestrosClientes:hover{
+    -webkit-animation-direction: alternate;
+    
+ }
 

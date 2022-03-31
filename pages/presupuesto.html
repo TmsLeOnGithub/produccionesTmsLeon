@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCCIONES TMS</title>
     <link rel="icon" type="icon/ico" href="../images-web/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--MIS ESTILOS AQUI ABAJO-->
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
 
 </head>
 
@@ -31,97 +32,111 @@
             </ul>
         </nav>
 
-        <a class="whatsappLink" title="logoWhatsappConlink" target="_blank"  href="https://www.whatsapp.com/?lang=es%E2%80%9D_blank%3EWHATSAPP">
+        <a class="whatsappLink" title="logoWhatsappConlink" target="_blank"
+            href="https://www.whatsapp.com/?lang=es%E2%80%9D_blank%3EWHATSAPP">
             <img width="50" height="50" src="../images-web/logoWhatsapp.png " alt="logoWhatsappConlink">
         </a>
     </header>
 
     <div class="contenedor">
         <h2 class="titulo">Calculá un presupuesto estimativo</h2>
-        <p>Tené en cuenta que el presupuesto puede variar para arriba o para abajo, segun promociones o gastos 
+        <p>Tené en cuenta que el presupuesto puede variar para arriba o para abajo, segun promociones o gastos
             extracomo viaticos o complejidad de edición.
         </p>
-    
-            <table border="5" cellpadding="11px" >
-                <th>SERVICIO</th>
-                <th>PRECIO POR HORA</th>
-                <th>Seleccione el servicio requerido</th>
-                <th>ingrese horas requeridas</th>
-                <th>SUBTOTAL</th>
-    
-                <tr>
-                    <td>FOTOGRAFIA</td>
-                    <td>$800</td>
-                    <td> <input type="checkbox"></td>
-                    <td><select name="" id="" >
-                        <option value="1">1</option> <!-- ESTAS OPCIONES IRIAN DESACTIVADAS SI EL USUARIO NO MARCA EL CASILLERO ANTERIOR-->
+
+        <table border="5" cellpadding="11px">
+            <th>SERVICIO</th>
+            <th>PRECIO POR HORA</th>
+            <th>Seleccione el servicio requerido</th>
+            <th>ingrese horas requeridas</th>
+            <th>SUBTOTAL</th>
+
+            <tr>
+                <td>FOTOGRAFIA</td>
+                <td>$800</td>
+                <td> <input type="checkbox"></td>
+                <td><select name="" id="">
+                        <option value="1">1</option>
+                        <!-- ESTAS OPCIONES IRIAN DESACTIVADAS SI EL USUARIO NO MARCA EL CASILLERO ANTERIOR-->
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
-    
-    
-                         </select>
-                    </td>
-                    <td></td> <!--ESPACIO PARA QUE CON OTRA HERRAMIENTA, SE COMPLETE CON EL RESULTADO DEL CALCULO-->
-                    
-                </tr>
-    
-                <tr>
-                    <td>VIDEO</td>
-                    <td>$1200</td>
-                    <td><input type="checkbox"></td>
-                    <td><select name="" id="" >
-                        <option value="1">1</option> <!-- ESTAS OPCIONES IRIAN DESACTIVADAS SI EL USUARIO NO MARCA EL CASILLERO ANTERIOR-->
+
+
+                    </select>
+                </td>
+                <td></td>
+                <!--ESPACIO PARA QUE CON OTRA HERRAMIENTA, SE COMPLETE CON EL RESULTADO DEL CALCULO-->
+
+            </tr>
+
+            <tr>
+                <td>VIDEO</td>
+                <td>$1200</td>
+                <td><input type="checkbox"></td>
+                <td><select name="" id="">
+                        <option value="1">1</option>
+                        <!-- ESTAS OPCIONES IRIAN DESACTIVADAS SI EL USUARIO NO MARCA EL CASILLERO ANTERIOR-->
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
-                    </td>
-                    <td></td> <!--ESPACIO PARA QUE CON OTRA HERRAMIENTA, SE COMPLETE CON EL RESULTADO DEL CALCULO-->
-                </tr>
-    
-                <tr>
-                    <td>ALQUILER DE LUCES</td>
-                    <td>$200</td>
-                    <td><input type="checkbox"></td>
-                    <td><select name="" id="" >
-                        <option value="1">1</option> <!-- ESTAS OPCIONES IRIAN DESACTIVADAS SI EL USUARIO NO MARCA EL CASILLERO ANTERIOR-->
+                </td>
+                <td></td>
+                <!--ESPACIO PARA QUE CON OTRA HERRAMIENTA, SE COMPLETE CON EL RESULTADO DEL CALCULO-->
+            </tr>
+
+            <tr>
+                <td>ALQUILER DE LUCES</td>
+                <td>$200</td>
+                <td><input type="checkbox"></td>
+                <td><select name="" id="">
+                        <option value="1">1</option>
+                        <!-- ESTAS OPCIONES IRIAN DESACTIVADAS SI EL USUARIO NO MARCA EL CASILLERO ANTERIOR-->
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
-                    </td>
-                    <td></td> <!--ESPACIO PARA QUE CON OTRA HERRAMIENTA, SE COMPLETE CON EL RESULTADO DEL CALCULO-->
-                    
-                </tr>
-    
-                <tr>
-                    <td>DRONE</td>
-                    <td>$3000</td>
-                    <td><input type="checkbox"></td>
-                    <td>1 Jornada</td>  
-                    <td></td> <!--ESPACIO PARA QUE CON OTRA HERRAMIENTA, SE COMPLETE CON EL RESULTADO DEL CALCULO-->
-                </tr>
-                
-    
-                <tr>
-                    <td>EDICIÓN</td>
-                    <td>$800</td>
-                    <td><input type="checkbox"></td>
-                    <td></td> <!--COMO LA HORA DE EDICION NO LA DECIDE EL CLIENTE NO TIENE OPCION. DEBERIA BUSCAR OTRA ALTERNATIVA PARA EL FORMULARIO-->
-                    <td></td>
-                </tr>
-            </table>
-    
-            <p>Te recomendamos contactarnos para brindarte un presupuesto más personalizado y brindarte ayuda
-                Podes hacerlo yendo a la sección CONTACTO o haciendo click aqui. <!--meter link-->
-            </p>
+                </td>
+                <td></td>
+                <!--ESPACIO PARA QUE CON OTRA HERRAMIENTA, SE COMPLETE CON EL RESULTADO DEL CALCULO-->
+
+            </tr>
+
+            <tr>
+                <td>DRONE</td>
+                <td>$3000</td>
+                <td><input type="checkbox"></td>
+                <td>1 Jornada</td>
+                <td></td>
+                <!--ESPACIO PARA QUE CON OTRA HERRAMIENTA, SE COMPLETE CON EL RESULTADO DEL CALCULO-->
+            </tr>
+
+
+            <tr>
+                <td>EDICIÓN</td>
+                <td>$800</td>
+                <td><input type="checkbox"></td>
+                <td></td>
+                <!--COMO LA HORA DE EDICION NO LA DECIDE EL CLIENTE NO TIENE OPCION. DEBERIA BUSCAR OTRA ALTERNATIVA PARA EL FORMULARIO-->
+                <td></td>
+            </tr>
+        </table>
+
+        <p>Te recomendamos contactarnos para brindarte un presupuesto más personalizado y brindarte ayuda
+            Podes hacerlo yendo a la sección CONTACTO o haciendo click aqui.
+            <!--meter link-->
+        </p>
     </div>
 
-    
+
 
 
     <footer class="footer">Página creada por Tomas Leon</footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
 
 </body>
 

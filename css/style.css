@@ -288,9 +288,6 @@ media-queries .reel {
     flex-direction: column ;
     align-items: center;
 }
-.contenedor__contacto:hover{
-    transform: rotate(-7deg);
-}
  }
 
 

@@ -1,0 +1,92 @@
+[33mcommit 1ac20e95eb85fa62269f1b8511000e5d643b26ac[m[33m ([m[1;36mHEAD -> [m[1;32mmedia-pseudo-clases[m[33m)[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Apr 2 19:57:57 2022 -0300
+
+    rama para borrar
+
+[33mcommit 8c0ac9c658956b42e0fbdb4a9c233e0e074d6fdc[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Apr 2 19:34:10 2022 -0300
+
+    bootstrap en Index.html con row y 4  columnas en fotos
+
+[33mcommit bd9d979fc4c94cf3d0ba54a740ccc061c2f1f127[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Apr 2 18:46:56 2022 -0300
+
+    cambie Div por section en cada seccion del index
+
+[33mcommit aa1d73821bfbb7374b9166ecd9c67e15b2711631[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Apr 2 18:37:04 2022 -0300
+
+    Row en cada sección del index.html
+
+[33mcommit 56dbd1f9222f00654deabc0c0f7c86f84c1c9646[m[33m ([m[1;32mmedia-pseudoclases[m[33m, [m[1;32mbootstrap[m[33m)[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Thu Mar 31 20:27:59 2022 -0300
+
+    agregue clase conteiner
+
+[33mcommit 2aacaa21e5a785a450c417b76bc4400c96d9b048[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Thu Mar 31 14:44:38 2022 -0300
+
+    agregue bootstrap a todas las paginas (b)
+
+[33mcommit dae91cb5e60d0063b224a51672b258e7cbd66b8b[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Thu Mar 31 14:02:30 2022 -0300
+
+    Paginas .htm CON BOOTSTRAP
+
+[33mcommit fc9aa70e668a1de86795b62b3c9c1b5f30b5cd21[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Merge: a40a1f4 f751981
+Author: TmsLeOnGithub <98426036+TmsLeOnGithub@users.noreply.github.com>
+Date:   Thu Mar 31 13:33:01 2022 -0300
+
+    Merge pull request #1 from TmsLeOnGithub/animaciones
+    
+    Animaciones
+
+[33mcommit f7519818e2a9965336b08cd9e5d0efe832f1981c[m[33m ([m[1;31morigin/animaciones[m[33m, [m[1;32manimaciones[m[33m)[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Mon Mar 28 18:46:56 2022 -0300
+
+    animacion contacto
+
+[33mcommit 7139022af8344f9c47f37163bb4e29b2bc366377[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Mon Mar 28 18:31:58 2022 -0300
+
+    animacion en clientes y contactos
+
+[33mcommit 9e6667a22cdefbad8a26643e6f2b9f56c953bad5[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Mar 26 18:23:02 2022 -0300
+
+    Animacion en todos los menu
+
+[33mcommit a7395ca70beeadc8e1ae7bc4fb71d9b902606fbc[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Mar 26 18:16:31 2022 -0300
+
+    Menu animado
+
+[33mcommit e44da6bf3c539255d12275bf1239b1f6b8b42e60[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Mar 26 18:12:20 2022 -0300
+
+    movimiento a lostextos de  imagen--texo y al footer
+
+[33mcommit 1aab46a5fae25b400e366612d42809fdf5d41179[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Mar 26 17:13:45 2022 -0300
+
+    Movimiento a imagenes de equipos
+
+[33mcommit a40a1f401f99aa9efdeb26704f15f34427c23100[m
+Author: TmsLeOnGithub <tomasleon2012@gmail.com>
+Date:   Sat Mar 26 16:07:05 2022 -0300
+
+    first commit

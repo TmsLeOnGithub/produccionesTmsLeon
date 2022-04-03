@@ -242,6 +242,11 @@ media-queries .reel {
         align-items: center;
     }
 
+    .carrusel__deportes{
+        align-items: center;
+    justify-content: center;
+    }
+
     .artistas{
         display: flex;
         flex-direction: column;
@@ -276,6 +281,10 @@ media-queries .reel {
 .titulo{
     display: flex;
     justify-content: center;
+}
+
+.table {
+    margin: 12px;
 }
 
 /*CONTACTO DESKTOP*/

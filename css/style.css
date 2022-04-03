@@ -200,8 +200,12 @@ media-queries .reel {
     height: 154px;
     margin: 11px;
 }
+/* PRESUPUESTO----------------------------------------------------------------------------------------*/
 
-/*MEDIA Y ESTILO PARA DESKTOP*/
+
+
+
+/*--------------------------MEDIA Y ESTILO PARA DESKTOP--------------------------------------------------------*/
 @media screen and (min-width: 768px) {
     body {
         display: grid;
@@ -222,11 +226,16 @@ media-queries .reel {
     .nosotros img:hover {
         border: solid 3px #B78571;
     }
-   
+   .imagenes__equipos{
+    /*border: 1px;*/   
+    background-color: #FFF6F1;
+   }
     .equipos img:hover{
-        border: solid 3px #ff8552;
         transform: rotate(-7deg)
     }
+.imagenes__equipos{
+    background-color:white;
+}
 
 /*TIPO DE EVENTOS DESKTOP*/
     .imagenes__equipos{

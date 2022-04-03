@@ -42,22 +42,27 @@
     <div class="row-cols-auto contenedor__contacto animate__animated animate__bounce">
         <h3>CONTACTO</h3>
 
-        <form  action="">
+        <form class="form-group" action="">
 
             <!--ACA ABAJO SE PIDE EL NOMBRE-->
-            <input type="text" placeholder="INGRESE SU NOMBRE">
+            <input class="mb-3" type="text" placeholder="INGRESE SU NOMBRE">
 
             <br>
             <!--BORRAR br CUANDO USEMOS CSS-->
 
             <!-- ACA ABAJO SE PIDE EL EMAIL-->
-            <input type="email" name="" id="" placeholder="INGRESE SU MAIL">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="INGRESE" aria-label="Username">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="EMAIL" aria-label="Server">
+              </div>
 
             <br>
             <!--BORRAR BR-->
 
             <!-- ACA ABAJO SE INGRESA EL MENSAJES-->
             <textarea name="" id="" cols="35" rows="10" placeholder="SU CONSULTA NO MOLESTA"> </textarea>
+            <button type="submit" class="btn btn-info">ENVIAR MENSAJE</button>
 
         </form>
 

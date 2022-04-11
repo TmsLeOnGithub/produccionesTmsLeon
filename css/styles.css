@@ -1,0 +1,124 @@
+.reel {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+media-queries .reel {
+  max-width: 600px;
+  display: flex;
+  justify-items: left; }
+
+.grid__h {
+  display: flex;
+  align-items: baseline; }
+
+.imagen {
+  width: 250px;
+  height: 180px; }
+
+/*IMAGENES DE NOSOTROS*-----------*/
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .nosotros img {
+    border: solid 2px #ff8552; }
+  @media screen and (min-width: 768px) {
+    .nosotros .nosotros__imagenes {
+      display: flex !important;
+      flex-direction: row !important; }
+      .nosotros .nosotros__imagenes .nosotros img:hover {
+        border: solid 3px #B78571 !important; } }
+  .nosotros .nosotros__imagenes {
+    display: flex;
+    flex-direction: column; }
+    .nosotros .nosotros__imagenes .contenedor__imagen {
+      position: relative;
+      display: inline;
+      width: 250px; }
+      .nosotros .nosotros__imagenes .contenedor__imagen .imagen--texto {
+        display: none;
+        font-weight: bolder;
+        background-color: #a3a3a380; }
+      .nosotros .nosotros__imagenes .contenedor__imagen:hover .imagen--texto {
+        position: absolute;
+        display: block;
+        bottom: 10px;
+        right: 44%;
+        color: #FFF6F1; }
+
+/*IMAGENES NUESTROS EQUIPOS-------------*/
+.equipos,
+.imagenes__equipos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+@media screen and (min-width: 768px) {
+  .equipos img:hover {
+    border: solid 3px #ff8552;
+    transform: rotate(-7deg); }
+  .equipos .imagenes__equipos {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly; } }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #FFF6F1;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 104px auto 52px; }
+
+.contenedor__contacto,
+main {
+  margin: 8px; }
+
+header {
+  background-color: #ff8552; }
+
+.menu,
+.footer {
+  background-color: #ff8552; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+nav ul {
+  display: inline-block; }
+  nav ul li {
+    display: inline-block; }
+
+.menu {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto; }
+  .menu li {
+    margin-inline: 19px;
+    right: 5cm;
+    font-weight: bold; }
+    .menu li a {
+      text-decoration: none; }
+
+.whatsappLink {
+  position: fixed;
+  top: 0cm;
+  right: 10cm;
+  left: 34cm; }
+  .whatsappLink img {
+    width: 50px;
+    height: 50px; }
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 52px auto 52px; }
+  .menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto; } }

@@ -18,71 +18,126 @@
 </head>
 
 <body class="container-fluid">
-  <header>   <!--------------------MENU-------------------------------------------------------------------->
+  <header>
+    <!--------------------MENU-------------------------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-light menu animate__animated animate__bounceInDown">
       <div class="container-fluid">
-          <a class="navbar-brand" href="#">MENU</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="../index.html">QUIENES SOMOS</a>
-                  <a class="nav-link" href="../pages/tipo-de-eventos.html">TIPO DE EVENTOS</a>
-                  <a class="nav-link" href="../PAGES/clientes.html">CLIENTES</a>
-                  <a class="nav-link" href="../pages/presupuesto.html">PRESUPUESTO</a>
-                  <a class="nav-link" href="contacto.html">CONTACTO</a>
-              </div>
+        <a class="navbar-brand" href="#">MENU</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="../index.html">QUIENES SOMOS</a>
+            <a class="nav-link" href="../pages/tipo-de-eventos.html">TIPO DE EVENTOS</a>
+            <a class="nav-link" href="../PAGES/clientes.html">CLIENTES</a>
+            <a class="nav-link" href="../pages/presupuesto.html">PRESUPUESTO</a>
+            <a class="nav-link" href="contacto.html">CONTACTO</a>
           </div>
+        </div>
       </div>
-  </nav>
-       </header><!-------------------------------------------------------------------------------------------->
+    </nav>
+  </header>
+  <!-------------------------------------------------------------------------------------------->
 
   <main>
     <div class="deportes">
       <h3>DEPORTES</h3>
-      <!--AQUI ABAJO Y EN LAS RESTANTES (ARTISTAS, MARCAS)IRIA UN CARRUSELE-->
+
       <h5>Cubrimos partidos de futbol profesional y amateur.Y tambien hacemos videos de cualquier evento deportivo</h5>
-      <div class="carrusel__deportes row ">
-        <img class="col col-md-5" src="../images-web/pablo-magnin.JPG" width="400">   
-          <video class="col col-md-6" controls autoplay src="../images-web/drone kempes.mp4" ></video>
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images-web/pablo-magnin.JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <video display autoplay src="../images-web/drone kempes.mp4" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
-      <!--TODO ESTO ES UNA PRUEBA DE CARRUSEL
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-           </div>
-
-           <div><a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div> -->
+      </div>
     </div>
 
 
- <div class="artistas">
+    <div class="artistas">
       <h3>ARTISTAS</h3>
-      <!--CARRUSELE-->
+      <!--CARRUSELE  <div class="carrusel__artistas"-->
       <h5>Tambien cubrimos eventos musicales, planificamos y rodamos videoclips, y cualquier obra artistica</h5>
 
-      <div class="carrusel__artistas">
-        <img class="imagen col col-md-6" src="../images-web/ciruelas.JPG">
-        <img clas="imagen__bateria col col-md-6" src="../images-web/cbateria.JPG" width="200">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images-web/ciruelas.JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../images-web/cbateria.JPG" class="d-block w-100" alt="...">
+          </div>
+        
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
 
-  
+
     <div class="marcas">
       <h3>MARCAS</h3>
-      <!--CARRUSELE-->
-      <h5>Ayudamos a las marcas y emprendedores, a visibilizar sus productos, ya sea con fotos o videos</h5>
-
-      <div class="carrusel__marcas row">
+      <!--CARRUSELE    <div class="carrusel__marcas row">
         <img class="imagen col col-md-4" src="../images-web/productopava.JPG">
         <img class="imagen col col-md-4" src="../images-web/producto11 (1).JPG">
         <img class="imagen col col-md-4" src="../images-web/producto11 (3).jpg">
+      </div>-->
+      <h5>Ayudamos a las marcas y emprendedores, a visibilizar sus productos, ya sea con fotos o videos</h5>
+     
+      <div id="carouselMarcas" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselMarcas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselMarcas" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselMarcas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images-web/producto11 (1).JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../images-web/producto11 (3).jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../images-web/productopava.JPG" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMarcas" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMarcas" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+     
     </div>
 
 

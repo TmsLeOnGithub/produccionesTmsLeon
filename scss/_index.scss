@@ -12,14 +12,13 @@ media-queries .reel {
     justify-items: left;
 }
 
-.grid__h {
-    display: flex;
-    align-items: baseline;
-}
-
 .imagen {
     width: 250px;
     height: 180px;
+}
+
+.table {
+    margin: 12px;
 }
 
 
@@ -79,12 +78,14 @@ media-queries .reel {
     align-items: center;
 }
 
+.imagenes__equipos {
+    background-color: white;
+}
 
 @media screen and (min-width: 768px) {
 
     .equipos {
         img:hover {
-            border: solid 3px $colorNaranjaTms;
             transform: rotate(-7deg);
         }
 
@@ -96,4 +97,9 @@ media-queries .reel {
             justify-content: space-evenly;
         }
     }
+}
+
+.carrusel__deportes {
+    align-items: center;
+    justify-content: center;
 }

@@ -1,2 +1,12 @@
 $colorNaranjaTms: #ff8552;
 $colorFondo: #FFF6F1;
+$letraGrande: 50px;
+
+
+$redes:(instagram:#dd2a7b,
+    whatsapp:#25D366);
+
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}

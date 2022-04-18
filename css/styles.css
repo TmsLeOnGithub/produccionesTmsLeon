@@ -79,9 +79,25 @@ body {
   grid-template-columns: auto;
   grid-template-rows: 104px auto 52px; }
 
+.contenedor__contacto {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
 .contenedor__contacto,
 main {
   margin: 8px; }
+
+.btn-redes, .btn--instagram, .btn--whatsapp {
+  border-radius: 50%;
+  font-weight: bold;
+  background-color: white; }
+
+.btn--instagram {
+  background-color: #dd2a7b; }
+
+.btn--whatsapp {
+  background-color: #25D366; }
 
 header {
   background-color: #ff8552; }
@@ -92,8 +108,8 @@ header {
 
 .footer {
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 nav ul {
   display: inline-block; }

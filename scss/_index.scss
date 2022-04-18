@@ -69,7 +69,6 @@ media-queries .reel {
     }
 }
 
-
 /*IMAGENES NUESTROS EQUIPOS-------------*/
 .equipos,
 .imagenes__equipos {
@@ -82,19 +81,23 @@ media-queries .reel {
     background-color: white;
 }
 
-@media screen and (min-width: 768px) {
+$vista: desktop;
 
-    .equipos {
-        img:hover {
-            transform: rotate(-7deg);
-        }
+@if $vista==desktop {
+    @media screen and (min-width: 768px) {
 
-        .imagenes__equipos {
-            width: 100%;
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: space-evenly;
+        .equipos {
+            img:hover {
+                transform: rotate(-7deg);
+            }
+
+            .imagenes__equipos {
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-evenly;
+            }
         }
     }
 }

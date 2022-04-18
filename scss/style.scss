@@ -1,19 +1,44 @@
 @import "index";
 @import "variables";
 
+$body-styles: (fuente: (Arial, Helvetica, sans-serif),
+    backGroundColor: $colorFondo,
+    margin: 0,
+    padding: 0);
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0!important;
-    background-color: $colorFondo;
+    font-family: map-get($body-styles, fuente);
+    margin: map-get($body-styles, margin);
+    padding: map-get($body-styles, padding) !important;
+    background-color: map-get($body-styles, backGroundColor);
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 104px auto 52px;
 }
 
+.contenedor__contacto {
+    @include flex-align-center;
+    flex-direction: column;
+}
+
 .contenedor__contacto,
 main {
     margin: 8px;
+}
+
+.btn-redes {
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: white;
+}
+
+@each $key,
+$value in $redes {
+    .btn--#{$key} {
+        @extend .btn-redes;
+        background-color: $value;
+    }
 }
 
 header {
@@ -26,9 +51,8 @@ header {
 }
 
 .footer {
-    display: flex;
+    @include flex-align-center;
     justify-content: center;
-    align-items: center;
 }
 
 nav ul {
@@ -53,7 +77,6 @@ nav ul {
             text-decoration: none;
         }
     }
-
 }
 
 .whatsappLink {

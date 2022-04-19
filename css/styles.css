@@ -1,3 +1,6 @@
+.navbar-expand-lg {
+  z-index: 1; }
+
 .reel {
   display: flex;
   flex-direction: column;
@@ -14,6 +17,17 @@ media-queries .reel {
 
 .table {
   margin: 12px; }
+
+.whatsappLink {
+  position: fixed;
+  top: 0cm;
+  right: 10cm;
+  left: 34cm;
+  z-index: 2; }
+  .whatsappLink img {
+    width: 50px;
+    height: 50px;
+    z-index: 2; }
 
 /*IMAGENES DE NOSOTROS*-----------*/
 .nosotros {
@@ -79,6 +93,9 @@ body {
   grid-template-columns: auto;
   grid-template-rows: 104px auto 52px; }
 
+.navbar {
+  z-index: 2; }
+
 .contenedor__contacto {
   display: flex;
   align-items: center;
@@ -111,22 +128,6 @@ header {
   align-items: center;
   justify-content: center; }
 
-nav ul {
-  display: inline-block; }
-  nav ul li {
-    display: inline-block; }
-
-.menu {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto; }
-  .menu li {
-    margin-inline: 19px;
-    right: 5cm;
-    font-weight: bold; }
-    .menu li a {
-      text-decoration: none; }
-
 .whatsappLink {
   position: fixed;
   top: 0cm;
@@ -140,7 +141,4 @@ nav ul {
   body {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 52px auto 52px; }
-  .menu {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto; } }
+    grid-template-rows: 52px auto 52px; } }

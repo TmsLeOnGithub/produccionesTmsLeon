@@ -17,6 +17,10 @@ body {
     grid-template-rows: 104px auto 52px;
 }
 
+.navbar {
+    z-index: 2;
+}
+
 .contenedor__contacto {
     @include flex-align-center;
     flex-direction: column;
@@ -55,30 +59,6 @@ header {
     justify-content: center;
 }
 
-nav ul {
-    display: inline-block;
-
-    li {
-        display: inline-block;
-    }
-}
-
-.menu {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-
-    li {
-        margin-inline: 19px;
-        right: 5cm;
-        font-weight: bold;
-
-        a {
-            text-decoration: none;
-        }
-    }
-}
-
 .whatsappLink {
     position: fixed;
     top: 0cm;
@@ -96,10 +76,5 @@ nav ul {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 52px auto 52px;
-    }
-
-    .menu {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
     }
 }

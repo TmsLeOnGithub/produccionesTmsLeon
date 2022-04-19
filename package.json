@@ -1,7 +1,7 @@
 {
   "name": "producciones-tms",
   "version": "1.0.0",
-  "description": "",
+  "description": "Página we de productora audiovisual con portfolio, calculador de presupuesto y contacto",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

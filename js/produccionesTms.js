@@ -75,7 +75,13 @@ divResumenPresupuesto.append(h6TotalSinDescuento);
 //cupon descuento
 
     let cuponDescuento= "tt"
-    let cuponIngresado=prompt("INGRESE CUPON DE DESCUENTO    (tt)");
+    // let cuponIngresado=prompt("INGRESE CUPON DE DESCUENTO    (tt)");
+
+
+function aplicarCupon() {
+    const inputCupon = document.getElementById("cupon");
+let cuponIngresado = inputCupon.value;    //'tt' ///TRAERLO DESDE EL VALUE DEL INPUT
+
     if(cuponIngresado == cuponDescuento){
         let descuento = 300;
         total = total- descuento    
@@ -84,10 +90,13 @@ divResumenPresupuesto.append(h6TotalSinDescuento);
         let h6TotalConDescuento = document.createElement("h6");
         h6TotalConDescuento.innerText= `Total con descuento: $${total}`;
         divResumenPresupuesto.append(h6TotalConDescuento);
+        
+    }else {
+        alert("El cupón ingresado no existe")
     }
+}
 
-
-//CUOTAS
+// CUOTAS
 
 let cuotas = parseInt(prompt("¿En cuantas cuotas queres pagar: 1,3,6,o 12?"))
 

@@ -87,10 +87,8 @@ let cuponIngresado = inputCupon.value;    //'tt' ///TRAERLO DESDE EL VALUE DEL I
         total = total- descuento    
         alert("se aplico el cupon de descuento")
 
-        let h6TotalConDescuento = document.createElement("h6");
+        let h6TotalConDescuento = document.getElementById("montoConDescuento");
         h6TotalConDescuento.innerText= `Total con descuento: $${total}`;
-        divResumenPresupuesto.append(h6TotalConDescuento);
-        
     }else {
         alert("El cupón ingresado no existe")
     }
@@ -98,18 +96,23 @@ let cuponIngresado = inputCupon.value;    //'tt' ///TRAERLO DESDE EL VALUE DEL I
 
 // CUOTAS
 
-let cuotas = parseInt(prompt("¿En cuantas cuotas queres pagar: 1,3,6,o 12?"))
+//let cuotas = parseInt(prompt("¿En cuantas cuotas queres pagar: 1,3,6,o 12?"))
 
-while(cuotas !== 1 && cuotas !== 3 && cuotas !== 6 && cuotas !== 12){
-    alert ("Solo tenemos 1,3,6 y 12 cuotas")
-    cuotas = parseInt(prompt("¿En cuantas cuotas queres pagar: 1,3,6,o 12?"))
+function aplicarCuotas(){
+    const selectCuotas = document.getElementById("cantidadCuotas");
+    let cuotas = selectCuotas.value;
+    let precioCuotas = Math.round(total / cuotas);
+    let h6Cuotas = document.getElementById("montoCuota");
+    h6Cuotas.innerHTML= `<strong>Serian ${cuotas} cuotas de $${precioCuotas}</strong>`;
 }
 
-let precioCuotas = Math.round(total / cuotas);
 
-let h6Cuotas = document.createElement("h6");
-h6Cuotas.innerHTML= `<strong>Serian ${cuotas} cuotas de $${precioCuotas}</strong>`;
-divResumenPresupuesto.append(h6Cuotas);
+
+
+
+
+
+
 
 
 // crear elementos Td q contengan lo que se guarda en los prompts

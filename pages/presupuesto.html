@@ -64,12 +64,36 @@
                     <th>HORAS</th>
             </table>
 
+            <div> <h5>¿EN CUANTAS CUOTAS QUERES PAGAR?</h5>  
+                <select class="form-control" name="" onchange="aplicarCuotas()" id="cantidadCuotas">
+                <option value="1"> 1 cuota</option>
+                <option value="3"> 3 cuotas</option>
+                <option value="6"> 6 cuotas</option>
+                <option value="12">12 cuotas</option>
+                </select>
+             </div>
+           
+      
+
             
             <input id="cupon" name="cupon" type="text" placeholder="CUPON"/>
 
-<button type="button" class="btn btn-outline-success" onclick="aplicarCupon()">APLICAR CUPON</button>
+            <button type="button" class="btn btn-outline-success" onclick="aplicarCupon()">APLICAR CUPON</button>
 
-            <div id="resumenPresupuesto"></div>
+            <div id="resumenPresupuesto">
+
+            </div>
+
+
+            <div>
+
+                <h6 id="montoConDescuento"></h6>
+
+                <h6 id="montoCuota">
+
+                </h6>
+
+            </div>
 
 
                 <!-- <table class="table" border="1px" cellpadding="11px">

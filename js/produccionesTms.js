@@ -75,7 +75,7 @@ divResumenPresupuesto.append(h6TotalSinDescuento);
 //cupon descuento
 
     let cuponDescuento= "tt"
-    // let cuponIngresado=prompt("INGRESE CUPON DE DESCUENTO    (tt)");
+
 
 
 function aplicarCupon() {
@@ -93,6 +93,7 @@ let cuponIngresado = inputCupon.value;    //'tt' ///TRAERLO DESDE EL VALUE DEL I
         alert("El cupón ingresado no existe")
     }
 }
+
 
 // CUOTAS
 

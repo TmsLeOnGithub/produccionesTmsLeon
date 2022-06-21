@@ -26,8 +26,15 @@ if(servicios === null){
     servicios = JSON.parse(localStorage.getItem("servicios"));
 }
 
+//desestructuración
 
+const  servicioFotografia = {
+    codigo: 1,
+    precio: 800,
+}
+const{codigo,precio} = servicioFotografia
 
+//spread precios
 
 let tablaServicios = document.getElementById ("tabla-servicios");
 
@@ -36,7 +43,7 @@ let fila = document.createElement("tr");
 fila.innerHTML= `<td> ${servicio.codigo}</td> 
                 <td> ${servicio.nombre} </td>
                 <td> $${servicio.precio}</td>
-                <td> <input id="${servicio.codigo}" type="number" value="${servicio.horas}"/></td>
+                <td> <input id="${servicio.codigo}" min="0" max="6" type="number"  value="${servicio.horas}"/></td>
                 <td id="subtotal-${servicio.codigo}"> ${servicio.subtotal != null ? servicio.subtotal : '' }</td>`;
                 
   tablaServicios.append(fila);              
@@ -83,6 +90,13 @@ function calcularTotal(){
         total += servicio.subtotal;
     })
 
+  let subtotales=servicios.map(servicio => servicio.subtotal)
+  let subtotalMasCaro= Math.max (...subtotales)
+  
+  let h6subtotalMasCaro= document.getElementById("subtotalMasCaro");
+  console.log(h6subtotalMasCaro)
+
+    h6subtotalMasCaro.innerText=`el subtotal más caro es de ${subtotalMasCaro}`
     let h6Total= document.getElementById("total");
     h6Total.innerText= `Total: $${total}`;
 }

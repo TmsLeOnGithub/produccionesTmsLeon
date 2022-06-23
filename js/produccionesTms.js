@@ -112,12 +112,48 @@ let cuponIngresado = inputCupon.value;    //'tt' ///TRAERLO DESDE EL VALUE DEL I
     if(cuponIngresado == cuponDescuento){
         let descuento = 300;
         total = total- descuento    
-        alert("se aplico el cupon de descuento")
+       //ALERT VALIDACION CUPON
+        let timerInterval
+        Swal.fire({
+          title: 'Validando Cupón',
+          html: 'I will close in <b></b> milliseconds.',
+          timer: 1000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+              b.textContent = Swal.getTimerLeft()
+            }, 100)
+          },
+          willClose: () => {
+            clearInterval(timerInterval)
+          }
+        }).then((result) => {
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log('I was closed by the timer')
+          }
+        })
+        //ALERT CUPÓN INGRESADO
+       setTimeout(() =>{
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'CUPÓN INGRESADO',
+            showConfirmButton: false,
+            timer: 1500
+          })
+       }, 2000)
 
         let h6TotalConDescuento = document.getElementById("montoConDescuento");
         h6TotalConDescuento.innerText= `Total con descuento: $${total}`;
     }else {
-        alert("El cupón ingresado no existe")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El cupón ingresado no existe',
+          })
+       
     }
 }
 
@@ -139,6 +175,20 @@ function aplicarCuotas(){
 function guardarPresupuesto(){
     const presupuesto= new Presupuesto(servicios,total)
     localStorage.setItem (`presupuesto`, JSON.stringify(presupuesto))
+    Swal.fire({
+        text: 'TU PRESUPUESTO FUE GUARDADO',
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        timer: 2000,
+        background: '#fff url(/images/trees.png)',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("/images-web/gatoTostada.gif")
+          left top
+          no-repeat
+        `
+      })
 }
 
 

@@ -1,0 +1,6 @@
+[ 
+    { "codigo": "1", "nombre":"fotografia", "precio":800}, 
+    {"codigo": "2", "nombre":"video", "precio":1200}, 
+    {"codigo": "3", "nombre":"drone", "precio":3000} 
+]
+

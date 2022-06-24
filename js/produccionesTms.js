@@ -15,21 +15,6 @@ function Presupuesto(serviciosElegidos, total) {
 
 let servicios;
 
-// let servicio1= new Servicio (1, "Fotografia", 800, null,0);
-// let servicio2= new Servicio (2, "Video", 1200,null,0);
-// let servicio3= new Servicio (3,"Drone",3000,null,0);
-
-// let serviciosDisponibles = [servicio1,servicio2,servicio3]; //array
-
-// let servicios = JSON.parse(localStorage.getItem("servicios"));
-
-// if(servicios === null){
-//     localStorage.setItem("servicios", JSON.stringify (serviciosDisponibles));
-//     servicios = JSON.parse(localStorage.getItem("servicios"));
-// }
-
-//Lista servicios json
-
 fetch(`../js/servicios.json`)
   .then((res) => res.json())
   .then((data) => { 
@@ -191,21 +176,34 @@ function aplicarCuotas() {
 
 function guardarPresupuesto() {
   const presupuesto = new Presupuesto(servicios, total)
-  localStorage.setItem(`presupuesto`, JSON.stringify(presupuesto))
-  Swal.fire({
-    text: 'TU PRESUPUESTO FUE GUARDADO',
-    width: 600,
-    padding: '3em',
-    color: '#716add',
-    timer: 2000,
-    background: '#fff url(/images/trees.png)',
-    backdrop: `
-          rgba(0,0,123,0.4)
-          url("/images-web/gatoTostada.gif")
-          left top
-          no-repeat
-        `
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify(presupuesto),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
   })
+    .then((response) => response.json())
+    .then((json) => {
+      localStorage.setItem(`presupuesto`, JSON.stringify(presupuesto))
+      Swal.fire({
+        text: 'TU PRESUPUESTO FUE GUARDADO',
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        timer: 2000,
+        backdrop: `
+              rgba(0,0,123,0.4)
+              url("/images-web/gatoTostada.gif")
+              left top
+              no-repeat
+            `
+      })
+
+    });
+
+ // 
+ 
 }
 
 

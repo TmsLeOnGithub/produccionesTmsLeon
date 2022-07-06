@@ -57,14 +57,12 @@ let cuponAplicado = false
 
 function calcularPresupuesto() {
   calcularTotal();
-  if(cuponAplicado) {
+  if (cuponAplicado) {
     actualizarTotalConDescuento()
   }
 
   aplicarCuotas();
 }
-
-
 // CALCULAR COSTO DE SERVICIOS SELECCIONADOS
 
 function calcularSubtotal(servicio) {
@@ -84,7 +82,6 @@ function getPrecioProducto(productoDeseado) {
     //solicitarCodigoProducto();
   }
 }
-
 //----------------------------------------------------------------------------------
 
 let total = 0;
@@ -163,11 +160,11 @@ function aplicarCupon() {
     let h6TotalConDescuento = document.getElementById("montoConDescuento");
     h6TotalConDescuento.innerText = `Total con descuento: $${total}`;
     aplicarCuotas();
-    
+
   } else if (cuponAplicado === true) {
     mostrarError('Ya se aplicó un cupón de descuento')
   } else {
-    mostrarError( 'El cupón ingresado no existe');
+    mostrarError('El cupón ingresado no existe');
   }
 }
 
@@ -187,7 +184,7 @@ function aplicarCuotas() {
   const selectCuotas = document.getElementById("cantidadCuotas");
   let cuotas = selectCuotas.value;
 
-  if(cuotas) {
+  if (cuotas) {
     let precioCuotas = Math.round(total / cuotas);
     let h6Cuotas = document.getElementById("montoCuota");
     h6Cuotas.innerHTML = `<strong>Serian ${cuotas} cuotas de $${precioCuotas}</strong>`;

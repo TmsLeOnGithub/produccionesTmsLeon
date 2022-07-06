@@ -17,48 +17,52 @@ let servicios;
 
 fetch(`../js/servicios.json`)
   .then((res) => res.json())
-  .then((data) => { 
+  .then((data) => {
     servicios = data;
-   generarTabla()
+    generarTabla()
 
   })
 
-  function generarTabla(){
-    
-    let tablaServicios = document.getElementById("tabla-servicios");
+function generarTabla() {
 
-    for (const servicio of servicios) {
-      let fila = document.createElement("tr");
-      fila.innerHTML = `<td> ${servicio.codigo}</td> 
+  let tablaServicios = document.getElementById("tabla-servicios");
+
+  for (const servicio of servicios) {
+    let fila = document.createElement("tr");
+    fila.innerHTML = `<td> ${servicio.codigo}</td> 
                 <td> ${servicio.nombre} </td>
                 <td> $${servicio.precio}</td>
-                <td> <input id="${servicio.codigo}" min="0" max="6" type="number"  value="${servicio.horas}"/></td>
-                <td id="subtotal-${servicio.codigo}"> ${servicio.subtotal != null ? servicio.subtotal : ''}</td>`;
+                <td> <input id="${servicio.codigo}" min="0" max="6" type="number"  value="${servicio.horas}"placeholder="0"/></td>
+                <td id="subtotal-${servicio.codigo}"> $ ${servicio.subtotal != null ? servicio.subtotal : ''}</td>`;
 
-      tablaServicios.append(fila);
+    tablaServicios.append(fila);
+    let h = document.getElementById(`${servicio.codigo}`)
+    let g = h.value
+    g.innerText = 0
 
-    }
+    tablaServicios.append(fila);
 
-    servicios.forEach(servicio => {
-      document.getElementById(servicio.codigo).addEventListener('change', function (event) {
-        servicio.horas = parseInt(event.target.value);
-        calcularSubtotal(servicio)
-      })
-    })
-    
   }
 
-//desestructuración
+  servicios.forEach(servicio => {
+    document.getElementById(servicio.codigo).addEventListener('change', function (event) {
+      servicio.horas = parseInt(event.target.value);
+      calcularSubtotal(servicio)
+    })
+  })
 
-const servicioFotografia = {
-  codigo: 1,
-  precio: 800,
 }
-const { codigo, precio } = servicioFotografia
 
-//spread precios
+let cuponAplicado = false
 
+function calcularPresupuesto() {
+  calcularTotal();
+  if(cuponAplicado) {
+    actualizarTotalConDescuento()
+  }
 
+  aplicarCuotas();
+}
 
 
 // CALCULAR COSTO DE SERVICIOS SELECCIONADOS
@@ -66,8 +70,8 @@ const { codigo, precio } = servicioFotografia
 function calcularSubtotal(servicio) {
   servicio.subtotal = (servicio.precio * servicio.horas);
   const tdSubtotal = document.getElementById(`subtotal-${servicio.codigo}`);
-  tdSubtotal.innerHTML = `<strong>${servicio.subtotal}</strong>`;
-  calcularTotal();
+  tdSubtotal.innerHTML = `<strong>$ ${servicio.subtotal}</strong>`;
+  calcularPresupuesto();
 }
 
 function getPrecioProducto(productoDeseado) {
@@ -91,29 +95,38 @@ function calcularTotal() {
   servicios.forEach(servicio => {
     total += servicio.subtotal;
   })
-
-  let subtotales = servicios.map(servicio => servicio.subtotal)
-  let subtotalMasCaro = Math.max(...subtotales)
-
-  let h6subtotalMasCaro = document.getElementById("subtotalMasCaro");
-  console.log(h6subtotalMasCaro)
-
-  h6subtotalMasCaro.innerText = `el subtotal más caro es de ${subtotalMasCaro}`
   let h6Total = document.getElementById("total");
   h6Total.innerText = `Total: $${total}`;
 }
 
 //cupon descuento
 
+function mostrarError(mensaje) {
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: mensaje,
+  })
+}
+
 let cuponDescuento = "tt"
+
 
 function aplicarCupon() {
   const inputCupon = document.getElementById("cupon");
   let cuponIngresado = inputCupon.value;    //'tt' ///TRAERLO DESDE EL VALUE DEL INPUT
 
-  if (cuponIngresado == cuponDescuento) {
+
+
+  if (total === 0) {
+    mostrarError("Primero ingrese cantidad de horas deseadas")
+    return;
+  }
+
+  if (cuponIngresado === cuponDescuento & cuponAplicado === false) {
     let descuento = 300;
     total = total - descuento
+    cuponAplicado = true
     //ALERT VALIDACION CUPON
     let timerInterval
     Swal.fire({
@@ -149,16 +162,22 @@ function aplicarCupon() {
 
     let h6TotalConDescuento = document.getElementById("montoConDescuento");
     h6TotalConDescuento.innerText = `Total con descuento: $${total}`;
+    aplicarCuotas();
+    
+  } else if (cuponAplicado === true) {
+    mostrarError('Ya se aplicó un cupón de descuento')
   } else {
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'El cupón ingresado no existe',
-    })
-
+    mostrarError( 'El cupón ingresado no existe');
   }
 }
 
+
+function actualizarTotalConDescuento() {
+  let descuento = 300;
+  total = total - descuento
+  let h6TotalConDescuento = document.getElementById("montoConDescuento");
+  h6TotalConDescuento.innerText = `Total con descuento: $${total}`;
+}
 
 // CUOTAS
 
@@ -167,9 +186,12 @@ function aplicarCupon() {
 function aplicarCuotas() {
   const selectCuotas = document.getElementById("cantidadCuotas");
   let cuotas = selectCuotas.value;
-  let precioCuotas = Math.round(total / cuotas);
-  let h6Cuotas = document.getElementById("montoCuota");
-  h6Cuotas.innerHTML = `<strong>Serian ${cuotas} cuotas de $${precioCuotas}</strong>`;
+
+  if(cuotas) {
+    let precioCuotas = Math.round(total / cuotas);
+    let h6Cuotas = document.getElementById("montoCuota");
+    h6Cuotas.innerHTML = `<strong>Serian ${cuotas} cuotas de $${precioCuotas}</strong>`;
+  }
 }
 
 
@@ -202,15 +224,12 @@ function guardarPresupuesto() {
 
     });
 
- // 
- 
+  // 
+
 }
 
 
 
-
-// crear elementos Td q contengan lo que se guarda en los prompts
-// con eventos de mouse habilitar/desabhilitar opciones 
 
 
 
